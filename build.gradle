@@ -2,9 +2,10 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.2'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id "io.freefair.lombok" version "6.6.1"
 }
 
-group = 'com.example'
+group = 'com.akbar'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
@@ -13,9 +14,11 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+	implementation 'io.freefair.lombok:io.freefair.lombok.gradle.plugin:6.6.1'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
