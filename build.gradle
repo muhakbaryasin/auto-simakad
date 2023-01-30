@@ -19,6 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
 	implementation 'io.freefair.lombok:io.freefair.lombok.gradle.plugin:6.6.1'
+	implementation group: 'com.opencsv', name: 'opencsv', version: '3.7'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }

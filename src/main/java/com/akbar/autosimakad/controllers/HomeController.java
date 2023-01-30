@@ -2,6 +2,7 @@ package com.akbar.autosimakad.controllers;
 
 import com.akbar.autosimakad.Response;
 import com.akbar.autosimakad.services.DosenService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,7 +21,11 @@ public class HomeController {
     ResponseEntity<Response> get() {
         try {
             dosenService.login();
+            dosenService.inputNilai();
+            dosenService.logout();
         } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
 
